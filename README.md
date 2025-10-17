@@ -125,11 +125,21 @@ Genie Deployer 2 is a FastAPI-based service built for the LLM Code Deployment pr
    uvicorn main:app --host 0.0.0.0 --port 8000
    ```
 
+## Live Demo
+
+The service is deployed and accessible at:
+
+**🌐 [https://thanos112357-genie-deployer-2.hf.space/](https://thanos112357-genie-deployer-2.hf.space/)**
+
+You can interact with the live API endpoints directly at this URL.
+
 ## Usage
 
 ### Submitting a Task
 
-Send a POST request to `/ready` with the following JSON structure:
+Send a POST request to the `/ready` endpoint with the following JSON structure:
+
+**Endpoint**: `https://thanos112357-genie-deployer-2.hf.space/ready`
 
 ```json
 {
@@ -162,18 +172,23 @@ The service immediately returns a 200 OK response and processes the task in the 
 
 ### Monitoring
 
-Check task status and logs:
+Check task status and logs using the live service:
 
 ```bash
 # Get current status
-curl http://localhost:8000/status
+curl https://thanos112357-genie-deployer-2.hf.space/status
 
 # View recent logs (last 200 lines)
-curl http://localhost:8000/logs?lines=200
+curl https://thanos112357-genie-deployer-2.hf.space/logs?lines=200
 
 # Health check
-curl http://localhost:8000/health
+curl https://thanos112357-genie-deployer-2.hf.space/health
 ```
+
+Or visit these endpoints directly in your browser:
+- Status: [https://thanos112357-genie-deployer-2.hf.space/status](https://thanos112357-genie-deployer-2.hf.space/status)
+- Health: [https://thanos112357-genie-deployer-2.hf.space/health](https://thanos112357-genie-deployer-2.hf.space/health)
+- Logs: [https://thanos112357-genie-deployer-2.hf.space/logs?lines=200](https://thanos112357-genie-deployer-2.hf.space/logs?lines=200)
 
 ## API Endpoints
 
